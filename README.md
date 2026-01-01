@@ -1,10 +1,8 @@
-# Nano Banana Pro Prompts
+# Nano Banana Pro Prompts Plugin for Claude Code
 
 A Claude Code plugin with a skill for creating effective prompts for Google's **Nano Banana Pro** (Gemini 3 Pro Image) AI image generation and editing model.
 
-## What This Skill Does
-
-This skill provides comprehensive guidance for writing structured, effective prompts for Nano Banana Pro. It helps with:
+## Features
 
 - **Image Generation** - Creating images from scratch with proper structure
 - **Outpainting** - Extending images beyond their borders
@@ -18,59 +16,64 @@ This skill provides comprehensive guidance for writing structured, effective pro
 
 ## Installation
 
-**1. Добавь marketplace:**
+### Option 1: Install via Claude Code CLI
+
 ```bash
-/plugin marketplace add markbrutx/nano-banana-pro-prompts
+claude plugin install github:markbrutx/nano-banana-pro-prompts
 ```
 
-**2. Установи плагин:**
+### Option 2: Clone to plugins directory
+
 ```bash
-/plugin install nano-banana-pro-prompts@markbrutx-nano-banana-pro-prompts
+cd ~/.claude/plugins
+git clone https://github.com/markbrutx/nano-banana-pro-prompts.git
 ```
 
-Или через интерактивный режим:
-```bash
-/plugin
-```
-Перейди в **Discover** → найди `nano-banana-pro-prompts` → установи.
+### Option 3: Local installation (for development)
 
+```bash
+claude plugin install /path/to/nano-banana-pro-prompts
+```
 
 ## Usage
 
-Once installed, use the skill by invoking:
+Once installed, Claude Code will automatically use this skill when you:
+
+- Ask about creating prompts for Nano Banana Pro
+- Request help with image generation, outpainting, inpainting
+- Want to create anime/manga style images
+- Need product photography prompts
+- Work with text rendering in images
+
+### Example Prompts
 
 ```
-/nano-banana-pro-prompts
+Help me write a prompt for Nano Banana Pro to create an anime character
 ```
 
-Or simply ask Claude Code to help you write prompts for Nano Banana Pro:
-
-- "Help me write a prompt for Nano Banana Pro to create an anime character"
-- "I need to extend this image to 16:9 wallpaper format using Nano Banana"
-- "Write a prompt for product photography with Nano Banana Pro"
-
-## Examples
-
-### Outpainting Request
 ```
-Extend this anime image beyond its original borders to a 16:9 widescreen wallpaper.
-Keep character's design intact. Expand background naturally.
-Output: 3840x2160, seamless integration.
+I need to extend this image to 16:9 wallpaper format using Nano Banana
 ```
 
-### Character Consistency
 ```
-Keep the person's facial features exactly the same as [Image1].
-Change expression to happy, new pose: standing.
-Place in coffee shop with warm lighting.
+Write a prompt for product photography with Nano Banana Pro
 ```
 
-### Product Photography
+## Plugin Structure
+
 ```
-Perfume bottle floating on dark water surface.
-Golden hour lighting, scattered rose petals.
-Camera: Low angle, shallow depth of field.
-Style: High-end commercial photography.
+nano-banana-pro-prompts/
+├── .claude-plugin/
+│   ├── marketplace.json
+│   └── plugin.json
+├── skills/
+│   └── nano-banana-pro-prompts/
+│       ├── SKILL.md
+│       └── references/
+│           └── prompt-examples.md
+├── README.md
+├── LICENSE
+└── .gitignore
 ```
 
 ## Key Principles
@@ -80,6 +83,11 @@ Style: High-end commercial photography.
 3. **Use the 6-Element Formula**: Subject, Composition, Action, Setting, Style, Aspect Ratio
 4. **Iterate, Don't Regenerate** - Refine with "Now change..." instead of starting over
 
+## Resources
+
+- [Google AI Studio](https://aistudio.google.com/)
+- [Gemini API Documentation](https://ai.google.dev/docs)
+
 ## License
 
-MIT License - see [LICENSE](LICENSE) for details.
+MIT License - see [LICENSE](LICENSE) file for details.
