@@ -1,0 +1,11 @@
+{
+  "name": "nano-banana-pro-prompts",
+  "description": "Plugins for Nano Banana Pro image generation prompts",
+  "plugins": [
+    {
+      "name": "nano-banana-pro-prompts",
+      "description": "Guide for creating effective prompts for Google's Nano Banana Pro (Gemini 3 Pro Image) AI model",
+      "path": "."
+    }
+  ]
+}

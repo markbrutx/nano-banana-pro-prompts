@@ -18,9 +18,21 @@ This skill provides comprehensive guidance for writing structured, effective pro
 
 ## Installation
 
+**1. Добавь marketplace:**
 ```bash
-/plugin add github:markbrutx/nano-banana-pro-prompts
+/plugin marketplace add markbrutx/nano-banana-pro-prompts
 ```
+
+**2. Установи плагин:**
+```bash
+/plugin install nano-banana-pro-prompts@markbrutx-nano-banana-pro-prompts
+```
+
+Или через интерактивный режим:
+```bash
+/plugin
+```
+Перейди в **Discover** → найди `nano-banana-pro-prompts` → установи.
 
 
 ## Usage
